@@ -1,9 +1,9 @@
 apiVersion: v1
 kind: Pod
 metadata:
+ name: pod-1
  labels:
    purpose: affinity
- name: pod-1
 spec:
  containers:
  # docker run -d --name nginx nginx
@@ -16,8 +16,8 @@ metadata:
  name: pod-2
 spec:
  affinity:
-    podAffinity:
-      requiredDuringSchedulingIgnoredDuringExecution:
+   podAffinity:
+     requiredDuringSchedulingIgnoredDuringExecution:
       - labelSelector:
           matchExpressions:
           - key: purpose
