@@ -38,14 +38,12 @@ spec:
  affinity:
   podAntiAffinity:
     requiredDuringSchedulingIgnoredDuringExecution:
-      - weight: 1
-        podAffinityTerm:
-          labelSelector:
-            matchExpressions:
-            - key: purpose
-              operator: In
-              values:
-              - affinity
+    - labelSelector:
+        matchExpressions:
+        - key: purpose
+          operator: In
+          values:
+          - affinity
         topologyKey: topology.kubernetes.io/zone     
  containers:
  # docker run -d --name nginx nginx
