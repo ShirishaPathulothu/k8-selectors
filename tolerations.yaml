@@ -11,4 +11,4 @@ spec:
  - key: hardware
    operator: Equal
    value: gpu 
-   effect: Noschedule
+   effect: NoSchedule
